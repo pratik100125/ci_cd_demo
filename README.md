@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# ci_cd_demo
+>>>>>>> 05b8b4c39711e3ca5abf866aa39fc6fe7319d800
