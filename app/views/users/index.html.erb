@@ -1,0 +1,25 @@
+<h1>Users</h1>
+<%= link_to "New User", new_user_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Profile Picture</th>
+    <th>Actions</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= link_to user.name, user_path(user) %></td>
+      <td>
+        <% if user.profile_picture.attached? %>
+        <% else %>
+          No image
+        <% end %>
+      </td>
+      <td>
+        <span style="display: ruby"><%= link_to "Edit", edit_user_path(user) %> | 
+        <%= button_to "Delete", user_path(user), method: :delete, data: { confirm: "Are you sure?" } %></span>
+      </td>
+    </tr>
+  <% end %>
+</table>

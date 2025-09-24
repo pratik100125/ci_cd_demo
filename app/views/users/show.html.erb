@@ -1,0 +1,16 @@
+<h1><%= @user.name %></h1>
+
+<h2>Profile Picture:</h2>
+<% if @user.profile_picture.attached? %>
+  <%= image_tag @user.profile_picture.variant(resize_to_limit: [150, 150]) %>
+  <p><%= link_to "Delete Profile Picture", user_path(@user), method: :delete %></p>
+<% end %>
+
+<h2>Documents:</h2>
+<ul>
+  <% @user.documents.each do |doc| %>
+    <li>
+      <%= link_to doc.filename, url_for(doc) %>
+    </li>
+  <% end %>
+</ul>
