@@ -84,6 +84,8 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
+    brakeman (7.1.0)
+      racc
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -98,6 +100,9 @@ GEM
     connection_pool (2.5.0)
     crass (1.0.6)
     date (3.4.1)
+    debug (1.11.0)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
     diff-lcs (1.6.2)
     dotenv (3.1.7)
     drb (2.2.1)
@@ -400,7 +405,9 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  brakeman
   capybara
+  debug
   image_processing (~> 1.14)
   importmap-rails
   jbuilder
